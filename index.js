@@ -1,5 +1,5 @@
 const inquirer = require('inquirer');
-//const readmeFile = require('./src/readme-template');
+const generateReadme = require('./src/readme-template.js');
 
 console.log(inquirer);
 
