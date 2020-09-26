@@ -1,4 +1,4 @@
-:house:#${name}//name of the project
+:house: #${name}//name of the project
 
 >${description}
 
@@ -11,22 +11,22 @@
 [Questions}(link)
 
 
-:memo:##Installation Instructions
+:memo:  ##Installation Instructions
 >${installation}
 
 
-:computer:##Usage Information
+:computer:  ##Usage Information
 >${information}
 
 
-:incoming_envelope:##Contribution Guidelines
+:incoming_envelope:  ##Contribution Guidelines
 >${contributing}
 
-:notebook:##Testing instructions
+:notebook:  ##Testing instructions
 >${tests}
 
 
-:question:##Questions
+:question:  ##Questions
 >:email:Email: ${email}
 >GitHub Username: ${github}
 >Repository Link: ${repoLink}
