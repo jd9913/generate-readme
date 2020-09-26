@@ -1,35 +1,41 @@
-:house: #${name}//name of the project
+:house:
+#${name}//name of the project
 
 >${description}
 
 
 ### Table of Contents
-[Installation instructions](link)
-[Usage Information](link)
-[Contribution Guidelines](link)
-[Testing instructions](link)
-[Questions}(link)
+[Installation instructions](link)<br>
+[Usage Information](link)<br>
+[Contribution Guidelines](link)<br>
+[Testing instructions](link)<br>
+[Questions}(link)<br>
 
 
-:memo:  ##Installation Instructions
+:memo:  
+##Installation Instructions
 >${installation}
 
 
-:computer:  ##Usage Information
+:computer:
+##Usage Information
 >${information}
 
 
-:incoming_envelope:  ##Contribution Guidelines
+:incoming_envelope:
+##Contribution Guidelines
 >${contributing}
 
-:notebook:  ##Testing instructions
+:notebook:
+##Testing instructions
 >${tests}
 
 
-:question:  ##Questions
->:email:Email: ${email}
->GitHub Username: ${github}
->Repository Link: ${repoLink}
+:question:
+##Questions
+>:email:Email: ${email}<br>
+>GitHub Username: ${github}<br>
+>Repository Link: ${repoLink}<br>
 
 
 ##Licenses
@@ -39,4 +45,4 @@
 
 ####Footer
 
-Made with love :gift_heart: by ${github}. 
+Made with love :gift_heart: by ${github}.
