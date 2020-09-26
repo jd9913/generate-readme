@@ -1,9 +1,13 @@
 const inquirer = require('inquirer');
-const readmeFile = require('./src/readme-template');
+//const readmeFile = require('./src/readme-template');
+
+console.log(inquirer);
+
 
 
 // array of questions for user
 const questions = () => {
+
     return inquirer.prompt([
         {
             type: 'input',
@@ -106,21 +110,32 @@ const questions = () => {
         {
             type: 'checkbox',
             name: 'licenses',
-            choices: ['license1','license2','license3']
-           },
+            choices: ['license1', 'license2', 'license3']
+        },
 
 
     ]);
-}
+
+};
+
+questions().then(answers => console.log(answers));
+
+
+//const readmePage = generateReadme();
 
 // function to write README file
-function writeToFile(fileName, data) {
-}
+
+//fs.writeFile('./index.html', readmePage, err => {
+  //  if (err) throw err;
+
+//console.log('Readme file complete.  Check out readme.md file to see the output!'); 
+
+//});
 
 // function to initialize program
-function init() {
+//function init() {
 
-}
+//}
 
 // function call to initialize program
-init();
+//init();

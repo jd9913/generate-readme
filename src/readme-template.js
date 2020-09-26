@@ -6,4 +6,4 @@ const generateDescription = descText => {
 }
 
 
-module.exports = readmeFile;
+module.exports = readmePage;
