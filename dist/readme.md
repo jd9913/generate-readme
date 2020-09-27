@@ -1,43 +1,44 @@
 
 
-[Licenses](https://img.shields.io/badge/License-MIT-blue.svg)
+![License](https://img.shields.io/badge/License-MIT-blue.svg)
+<br>
 
-:house: stuw5ty <br>
+
+:house: Readme generator <br>
 ==
 
 Description
 --
->asreyhaery<br>
-<br>
+>this generates a readme file to place with an app on Github.<br>
 
 ### Table of Contents
-<a name ="install">Installation Instructions</a><br>
-<a name ="usage">Usage Information</a><br>
-<a name ="contribute">Contribution Guidelines</a><br>
-<a name ="test">Testing Instructions</a><br>
-<a name ="quest">Questions</a><br>
+[Installation](#install)<br>
+[Usage Information](#usage)</a><br>
+[Contribution Guidelines](#contribute)<br>
+[Testing Instructions](#test)<br>
+[Questions](#quest)<br>
 
-:memo: [Installation Instructions](#install)
+:memo: [Installation Instructions](install)
 ========
->aryhaery
+>use the command prompt and install node.js and inquirer npm to install
 
-:computer: [Usage Information](#usage)
+:computer: [Usage Information](usage)
 ===
->srthserty
+>use this to generate styled readme files
 
-:incoming_envelope: [Contribution Guidelines](#contribute)
+:incoming_envelope: [Contribution Guidelines](contribute)
 ==
->srtyhsery
+>use the issues tabs to add contributions
 
-:notebook: [Testing instructions](#test)
+:notebook: [Testing instructions](test)
 ==
->srtyhsr
+>install and use, add any issues to issues tab
 
-:question: [Questions](#quest)
+:question: [Questions](quest)
 ==
->:email:Email: arheraey<br>
->GitHub Username: asdfadef<br>
->:link: Repository Link: sfdgaserfg<br>
+>:email:Email: jd9913@gmail.com<br>
+>GitHub Username: jd9913<br>
+>:link: Repository Link: www.github.com<br>
 
 [Licenses](#license)
 ==
@@ -48,6 +49,6 @@ Description
 Footer
 --
 
-Made with love :gift_heart: by asdfadef.<br>:copyright: 2020
+Made with love :gift_heart: by jd9913.<br>:copyright: 2020
 
         

@@ -1,24 +1,11 @@
 //create the description section
 
 const generateReadme = readmeProfile => {
-    console.log(readmeProfile);
-
-    const { github, email, readme } = readmeProfile;
-
-    console.log(github);
-
-    let temp = {};
-
-
-
-
-
-    //module.exports = (github, email, name, repoLink, description, installation, information, contributing, tests, licenses);
-
+    
 
     return `
 
-[Licenses](https://img.shields.io/badge/License-${readmeProfile.licenses}-blue.svg)
+![License](https://img.shields.io/badge/License-${readmeProfile.licenses}-blue.svg)
 
 :house: ${readmeProfile.name} <br>
 ==
@@ -26,32 +13,31 @@ const generateReadme = readmeProfile => {
 Description
 --
 >${readmeProfile.description}<br>
-<br>
 
 ### Table of Contents
-<a name ="install">Installation Instructions</a><br>
-<a name ="usage">Usage Information</a><br>
-<a name ="contribute">Contribution Guidelines</a><br>
-<a name ="test">Testing Instructions</a><br>
-<a name ="quest">Questions</a><br>
+[Installation](#install)<br>
+[Usage Information](#usage)</a><br>
+[Contribution Guidelines](#contribute)<br>
+[Testing Instructions](#test)<br>
+[Questions](#quest)<br>
 
-:memo: [Installation Instructions](#install)
+:memo: [Installation Instructions](install)
 ========
 >${readmeProfile.installation}
 
-:computer: [Usage Information](#usage)
+:computer: [Usage Information](usage)
 ===
 >${readmeProfile.information}
 
-:incoming_envelope: [Contribution Guidelines](#contribute)
+:incoming_envelope: [Contribution Guidelines](contribute)
 ==
 >${readmeProfile.contributing}
 
-:notebook: [Testing instructions](#test)
+:notebook: [Testing instructions](test)
 ==
 >${readmeProfile.tests}
 
-:question: [Questions](#quest)
+:question: [Questions](quest)
 ==
 >:email:Email: ${readmeProfile.email}<br>
 >GitHub Username: ${readmeProfile.github}<br>
