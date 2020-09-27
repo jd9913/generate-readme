@@ -38,7 +38,7 @@ Description
 ==
 >:email:Email: jd9913@gmail.com<br>
 >GitHub Username: jd9913<br>
->:link: Repository Link: www.github.com<br>
+>:link: Repository Link: https://github.com/jd9913/generate-readme<br>
 
 [Licenses](#license)
 ==
