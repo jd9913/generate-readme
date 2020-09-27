@@ -1,6 +1,6 @@
 
 
-(https://img.shields.io/badge/License-MIT-blue.svg)
+https://img.shields.io/badge/License-MIT-blue.svg
 
 :house: readme generator <br>
 ==
