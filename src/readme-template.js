@@ -1,39 +1,44 @@
 //create the description section
 
+
 const generateReadme = readmeProfile => {
 
-    
-    const licenseBadge = readmeProfile.filter(({ licenses }) => {
+    const { github, email, readme } = readmeProfile;
+
+    let temp = {};
+
+    temp = readme.map(({ name, repoLink, description, installation, information, contributing, tests, licenses }) => {
+
+        let badges = {};
+
+        badges = licenses.filter(license => {
+
+
+            if (license = 'MIT_License') {
+                return ('[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)');
+                
+
+            };
+
+            if (license = 'GNU_GPLv3') {
+               return ('[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)');
+                
+            };
+
+            if (license = 'ApacheLicense_2.0') {
+                return badges.push('[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)');
+                
+            };
+
+          });
+        console.log(github, email, name, repoLink, description, installation, information, contributing, tests, licenses);
         
-        const badges = [];
 
-        if (licenses ='MIT License') {
-            badges.push('[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)');
-            return ${ badges.join('') };
-        };
+        return `
 
-        if (licenses = 'GNU GPLv3') {
-            badges.push('[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)');
-            return ${ badges.join('') };
-        };
+${badges}
 
-        if (licenses = 'ApacheLicense 2.0') {
-            return badges.push('[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)');
-            return ${ badges.join('') };
-        };
-        
-    });
-}
-
-module.exports = makeReadme => {
-
-    const { description, information, installation, contributing, tests, licenses, ...user } = makeReadme;
-
-    return `
-
-${licenseBadge(badges)}
-
-:house: ${user.name} <br>
+:house: ${name} <br>
 ==
 
 Description
@@ -66,9 +71,9 @@ Description
 
 :question: [Questions](#quest)
 ==
->:email:Email: ${user.email}<br>
->GitHub Username: ${user.github}<br>
->:link: Repository Link: ${user.repoLink}<br>
+>:email:Email: ${email}<br>
+>GitHub Username: ${github}<br>
+>:link: Repository Link: ${repoLink}<br>
 
 [Licenses](#license)
 ==
@@ -82,9 +87,10 @@ Footer
 Made with love :gift_heart: by ${github}.<br>\
 :copyright: ${new Date().getFullYear()}
 
+        `;
 
+    });
 
-`;
 
 }
 

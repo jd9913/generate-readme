@@ -1,6 +1,10 @@
 const inquirer = require('inquirer');
 const generateReadme = require('./src/readme-template.js');
 
+const fs = require('fs');
+
+//const writeFile=require('./utils/generate-file');
+
 
 const userQuestions = () => {
 
@@ -37,7 +41,7 @@ const userQuestions = () => {
 };
 
 
-const readmeQuestions = allReadme => {
+const readmeQuestions = readmeData => {
     console.log(`
 -------------------------
 Add Readme.md Information
@@ -145,7 +149,7 @@ Add Readme.md Information
             {
                 type: 'checkbox',
                 name: 'licenses',
-                choices: ['MIT License', 'GNU GPLv3', 'ApacheLicense 2.0']
+                choices: ['MIT_License', 'GNU_GPLv3', 'ApacheLicense_2.0']
             },
             {
                 type: 'confirm',
@@ -154,8 +158,8 @@ Add Readme.md Information
                 default: false
             }
         ])
-        .then(readmeData => {
-            allReadme.readme.push(readmeData);
+        .then(allReadme => {
+            readmeData.readme.push(allReadme);
             if (readmeData.confirmAddNext) {
                 return readmeQuestions(readmeData)
             } else {
@@ -165,24 +169,33 @@ Add Readme.md Information
 
 };
 
+
+
+
+    
 userQuestions()
 
     .then(readmeQuestions)
     .then(allReadme => {
-        return generateReadme(allReadme);
-    })
-    .then(readmeFile => {
+        const readmeFile = generateReadme(allReadme);
+
+        fs.writeFile('./dist/readme.md', readmeFile, err => {
+            if (err) throw new Error(err);
+            console.log('Readme File created.  See dist/readme.md to see it');
+        });
+    });
+
+
+
+    /*.then(readmeFile => {
         return writeFile(readmeFile);
     })
-    .then(writeFileResponse => {
+   .then(writeFileResponse => {
         console.log(writeFileResponse);
-        return copyFile();
-    })
-    .then(copyFileResponse => {
-        console.log(copyFileResponse);
     })
     .catch(err => {
         console.log(err);
-    })
+    })*/
+    
 
 
