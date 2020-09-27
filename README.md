@@ -1,43 +1,44 @@
 
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)]
+![License](https://img.shields.io/badge/License-MIT-blue.svg)
+<br>
 
-:house: readme generator <br>
+
+:house: Readme generator <br>
 ==
 
 Description
 --
->project to generate a styled readme file<br>
-<br>
+>this generates a readme file to place with an app on Github.<br>
 
 ### Table of Contents
-<a name ="install">Installation Instructions</a><br>
-<a name ="usage">Usage Information</a><br>
-<a name ="contribute">Contribution Guidelines</a><br>
-<a name ="test">Testing Instructions</a><br>
-<a name ="quest">Questions</a><br>
+[Installation](#install)<br>
+[Usage Information](#usage)</a><br>
+[Contribution Guidelines](#contribute)<br>
+[Testing Instructions](#test)<br>
+[Questions](#quest)<br>
 
-:memo: [Installation Instructions](#install)
+:memo: [Installation Instructions](install)
 ========
->use the command line and type node index
+>use the command prompt and install node.js and inquirer npm to install
 
-:computer: [Usage Information](#usage)
+:computer: [Usage Information](usage)
 ===
->must have node.js and npm inquirer installed to use
+>use this to generate styled readme files
 
-:incoming_envelope: [Contribution Guidelines](#contribute)
+:incoming_envelope: [Contribution Guidelines](contribute)
 ==
->download the file add any issues to the issues tab
+>use the issues tabs to add contributions
 
-:notebook: [Testing instructions](#test)
+:notebook: [Testing instructions](test)
 ==
->download files, supporting apps and run it
+>install and use, add any issues to issues tab
 
-:question: [Questions](#quest)
+:question: [Questions](quest)
 ==
 >:email:Email: jd9913@gmail.com<br>
 >GitHub Username: jd9913<br>
->:link: Repository Link: https://github.com/jd9913/generate-readme.git<br>
+>:link: Repository Link: www.github.com<br>
 
 [Licenses](#license)
 ==
