@@ -1,49 +1,31 @@
 //create the description section
 
-
 const generateReadme = readmeProfile => {
+    console.log(readmeProfile);
 
     const { github, email, readme } = readmeProfile;
 
+    console.log(github);
+
     let temp = {};
 
-    temp = readme.map(({ name, repoLink, description, installation, information, contributing, tests, licenses }) => {
-
-        let badges = {};
-
-        badges = licenses.filter(license => {
 
 
-            if (license = 'MIT_License') {
-                return ('[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)');
-                
 
-            };
 
-            if (license = 'GNU_GPLv3') {
-               return ('[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)');
-                
-            };
+    //module.exports = (github, email, name, repoLink, description, installation, information, contributing, tests, licenses);
 
-            if (license = 'ApacheLicense_2.0') {
-                return badges.push('[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)');
-                
-            };
 
-          });
-        console.log(github, email, name, repoLink, description, installation, information, contributing, tests, licenses);
-        
+    return `
 
-        return `
+[Licenses](https://img.shields.io/badge/License-${readmeProfile.licenses}-blue.svg)
 
-${badges}
-
-:house: ${name} <br>
+:house: ${readmeProfile.name} <br>
 ==
 
 Description
 --
->${description}<br>
+>${readmeProfile.description}<br>
 <br>
 
 ### Table of Contents
@@ -55,44 +37,42 @@ Description
 
 :memo: [Installation Instructions](#install)
 ========
->${installation}
+>${readmeProfile.installation}
 
 :computer: [Usage Information](#usage)
 ===
->${information}
+>${readmeProfile.information}
 
 :incoming_envelope: [Contribution Guidelines](#contribute)
 ==
->${contributing}
+>${readmeProfile.contributing}
 
 :notebook: [Testing instructions](#test)
 ==
->${tests}
+>${readmeProfile.tests}
 
 :question: [Questions](#quest)
 ==
->:email:Email: ${email}<br>
->GitHub Username: ${github}<br>
->:link: Repository Link: ${repoLink}<br>
+>:email:Email: ${readmeProfile.email}<br>
+>GitHub Username: ${readmeProfile.github}<br>
+>:link: Repository Link: ${readmeProfile.repoLink}<br>
 
 [Licenses](#license)
 ==
 >This application is covered under the following license(s): <br>
->>${licenses}<br>
+>>${readmeProfile.licenses}<br>
 >>click [here](https://choosealicense.com/licenses/) to read about these licenses.
 
 Footer
 --
 
-Made with love :gift_heart: by ${github}.<br>\
+Made with love :gift_heart: by ${readmeProfile.github}.<br>\
 :copyright: ${new Date().getFullYear()}
 
         `;
 
-    });
+};
 
-
-}
 
 
 

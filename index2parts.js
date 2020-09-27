@@ -1,10 +1,10 @@
 const inquirer = require('inquirer');
 const generateReadme = require('./src/readme-template.js');
+
 const fs = require('fs');
 
-const promptUser = () => {
 
-   let readmeData = [];
+const userQuestions = () => {
 
     return inquirer
         .prompt([
@@ -34,6 +34,23 @@ const promptUser = () => {
                     }
                 }
             },
+
+        ])
+};
+
+
+const readmeQuestions = readmeData => {
+    console.log(`
+-------------------------
+Add Readme.md Information
+-------------------------
+`);
+
+    readmeData.readme = [];
+   
+
+    return inquirer
+        .prompt([
             {
                 type: 'input',
                 name: 'name',
@@ -125,24 +142,32 @@ const promptUser = () => {
                     }
                 }
             },
+
             {
                 type: 'checkbox',
                 name: 'licenses',
-                choices: ['MIT', 'GPLv3', 'Apache_2.0']
+                choices: ['MIT_License', 'GNU_GPLv3', 'ApacheLicense_2.0']
             },
-
+         
         ])
-        
-        .then((allReadme) => {
-            readmeData.push(allReadme);
-            
-            const readmeFile = generateReadme(allReadme);
-            
-            fs.writeFile('./dist/readme.md', readmeFile, err => {
-                if (err) throw new Error(err);
-                console.log('Readme File created.  See dist/readme.md to see it');
-            })
+        .then(allReadme => {
+            readmeData.readme.push(allReadme);
+            return readmeData;
+
+
         });
 };
 
-promptUser()
+
+userQuestions()
+
+
+    .then(readmeQuestions)
+    .then(allReadme => {
+        const readmeFile = generateReadme(allReadme);
+
+        fs.writeFile('./dist/readme.md', readmeFile, err => {
+            if (err) throw new Error(err);
+            console.log('Readme File created.  See dist/readme.md to see it');
+        });
+    });
