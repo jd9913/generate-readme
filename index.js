@@ -1,12 +1,10 @@
 const inquirer = require('inquirer');
 const generateReadme = require('./src/readme-template.js');
-
 const fs = require('fs');
 
-//const writeFile=require('./utils/generate-file');
+const promptUser = () => {
 
-
-const userQuestions = () => {
+   let readmeData = [];
 
     return inquirer
         .prompt([
@@ -36,24 +34,6 @@ const userQuestions = () => {
                     }
                 }
             },
-
-        ])
-};
-
-
-const readmeQuestions = readmeData => {
-    console.log(`
--------------------------
-Add Readme.md Information
--------------------------
-`);
-
-    if (!readmeData.readme) {
-        readmeData.readme = [];
-    }
-
-    return inquirer
-        .prompt([
             {
                 type: 'input',
                 name: 'name',
@@ -145,57 +125,24 @@ Add Readme.md Information
                     }
                 }
             },
-
             {
                 type: 'checkbox',
                 name: 'licenses',
-                choices: ['MIT_License', 'GNU_GPLv3', 'ApacheLicense_2.0']
+                choices: ['MIT', 'GPLv3', 'Apache_2.0']
             },
-            {
-                type: 'confirm',
-                name: 'confirmAddNext',
-                message: 'Would you like to add another Readme file?',
-                default: false
-            }
-        ])
-        .then(allReadme => {
-            readmeData.readme.push(allReadme);
-            if (readmeData.confirmAddNext) {
-                return readmeQuestions(readmeData)
-            } else {
-                return readmeData;
-            }
-        });
 
+        ])
+        
+        .then((allReadme) => {
+            readmeData.push(allReadme);
+            
+            const readmeFile = generateReadme(allReadme);
+            
+            fs.writeFile('./dist/readme.md', readmeFile, err => {
+                if (err) throw new Error(err);
+                console.log('Readme File created.  See dist/readme.md to see it');
+            })
+        });
 };
 
-
-
-
-    
-userQuestions()
-
-    .then(readmeQuestions)
-    .then(allReadme => {
-        const readmeFile = generateReadme(allReadme);
-
-        fs.writeFile('./dist/readme.md', readmeFile, err => {
-            if (err) throw new Error(err);
-            console.log('Readme File created.  See dist/readme.md to see it');
-        });
-    });
-
-
-
-    /*.then(readmeFile => {
-        return writeFile(readmeFile);
-    })
-   .then(writeFileResponse => {
-        console.log(writeFileResponse);
-    })
-    .catch(err => {
-        console.log(err);
-    })*/
-    
-
-
+promptUser()
