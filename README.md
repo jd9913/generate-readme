@@ -1,6 +1,6 @@
 
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)]
 
 :house: readme generator <br>
 ==
@@ -37,7 +37,7 @@ Description
 ==
 >:email:Email: jd9913@gmail.com<br>
 >GitHub Username: jd9913<br>
->:link: Repository Link: https://github.com<br>
+>:link: Repository Link: https://github.com/jd9913/generate-readme.git<br>
 
 [Licenses](#license)
 ==
