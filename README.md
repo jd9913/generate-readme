@@ -1,48 +1,53 @@
-:house:
-#${name}//name of the project
 
->${description}
 
+[Licenses](https://img.shields.io/badge/License-MIT-blue.svg)
+
+:house: readme generator <br>
+==
+
+Description
+--
+>project to generate a styled readme file<br>
+<br>
 
 ### Table of Contents
-[Installation instructions](link)<br>
-[Usage Information](link)<br>
-[Contribution Guidelines](link)<br>
-[Testing instructions](link)<br>
-[Questions}(link)<br>
+<a name ="install">Installation Instructions</a><br>
+<a name ="usage">Usage Information</a><br>
+<a name ="contribute">Contribution Guidelines</a><br>
+<a name ="test">Testing Instructions</a><br>
+<a name ="quest">Questions</a><br>
 
+:memo: [Installation Instructions](#install)
+========
+>use the command line and type node index
 
-:memo:  
-##Installation Instructions
->${installation}
+:computer: [Usage Information](#usage)
+===
+>must have node.js and npm inquirer installed to use
 
+:incoming_envelope: [Contribution Guidelines](#contribute)
+==
+>download the file add any issues to the issues tab
 
-:computer:
-##Usage Information
->${information}
+:notebook: [Testing instructions](#test)
+==
+>download files, supporting apps and run it
 
+:question: [Questions](#quest)
+==
+>:email:Email: jd9913@gmail.com<br>
+>GitHub Username: jd9913<br>
+>:link: Repository Link: https://github.com<br>
 
-:incoming_envelope:
-##Contribution Guidelines
->${contributing}
-
-:notebook:
-##Testing instructions
->${tests}
-
-
-:question:
-##Questions
->:email:Email: ${email}<br>
->GitHub Username: ${github}<br>
->Repository Link: ${repoLink}<br>
-
-
-##Licenses
+[Licenses](#license)
+==
 >This application is covered under the following license(s): <br>
->>${licenses}
+>>MIT<br>
 >>click [here](https://choosealicense.com/licenses/) to read about these licenses.
 
-####Footer
+Footer
+--
 
-Made with love :gift_heart: by ${github}.
+Made with love :gift_heart: by jd9913.<br>:copyright: 2020
+
+        
