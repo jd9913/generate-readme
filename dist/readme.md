@@ -1,15 +1,13 @@
 
 
-![License](https://img.shields.io/badge/License-MIT-blue.svg)
-<br>
+![License](https://img.shields.io/badge/License--blue.svg)
 
-
-:house: Readme generator <br>
+:house: Covid Utilization Capacity Dashboard <br>
 ==
 
 Description
 --
->this generates a readme file to place with an app on Github.<br>
+>This dashboard was created during county Covid-19 response operations to tack hospital utilization of Covid positive patients.  It was extensively used within the WebEOC platform<br>
 
 ### Table of Contents
 [Installation](#install)<br>
@@ -20,35 +18,35 @@ Description
 
 :memo: [Installation Instructions](install)
 ========
->use the command prompt and install node.js and inquirer npm to install
+>Clone the repository, open index.html with a webserver.
 
 :computer: [Usage Information](usage)
 ===
->use this to generate styled readme files
+>Data is located within the data folder as a JSON file.  Any data can be substituted for this site to function as long as the keys are not changed.
 
 :incoming_envelope: [Contribution Guidelines](contribute)
 ==
->use the issues tabs to add contributions
+>Any contributions or suggestions should be contributed via the issues tab in the repository
 
 :notebook: [Testing instructions](test)
 ==
->install and use, add any issues to issues tab
+>see installation instructions
 
 :question: [Questions](quest)
 ==
 >:email:Email: jd9913@gmail.com<br>
 >GitHub Username: jd9913<br>
->:link: Repository Link: www.github.com<br>
+>:link: Repository Link: https://github.com/jd9913/Covid-Utilization-Dashboard<br>
 
 [Licenses](#license)
 ==
 >This application is covered under the following license(s): <br>
->>MIT<br>
+>><br>
 >>click [here](https://choosealicense.com/licenses/) to read about these licenses.
 
 Footer
 --
 
-Made with love :gift_heart: by jd9913.<br>:copyright: 2020
+Made with love :gift_heart: by jd9913.<br>:copyright: 2021
 
         

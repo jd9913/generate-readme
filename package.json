@@ -2,9 +2,12 @@
   "name": "generate-readme",
   "version": "0.0.0",
   "description": "generate-readme",
-  "main": "server.js",
+  "main": "app.js",
+  "scripts":{
+    "start":"node index.js"
+  },
   "author": {
-    "name": ""
+    "name": "jd9913"
   },
   "dependencies": {
     "inquirer": "^7.3.3"
